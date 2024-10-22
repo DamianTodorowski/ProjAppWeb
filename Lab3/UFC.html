@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="pl" />
+    <meta name="Author" content="Damian Todorowski" />
+    <title>Moje Hobby: MMA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image">
+    <link rel="stylesheet" href="style.css"> 
+    <script src="timedate.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body onload="startClock()">
+    <div id="wrapper">
+        <header>
+            <img src="Octagon.jpg" alt="octagon header"/>
+        </header>
+        <nav>
+            <a class="menu" href="index.html" id="animacjaTestowa1Menu">O MMA</a>
+            <a class="menu active" href="UFC.html" id="animacjaTestowa2Menu">Ulubiona federacja</a>
+            <a class="menu" href="divisions.html" id="animacjaTestowa3Menu">Dywizje</a>
+            <a class="menu" href="pereira.html" id="animacjaTestowa4Menu">Ulubiony zawodnik</a>
+            <a class="menu" href="poland.html" id="animacjaTestowa5Menu">Polacy w UFC</a>
+        </nav>
+        <section>
+            <article>
+                <h1>Ulubiona Federacja: UFC</h1>
+
+                <img src="LOGO.jpg"  alt="Logo UFC" class="logo-image" />
+
+                <p>
+                    <strong>Ultimate Fighting Championship (UFC)</strong> to największa i najbardziej prestiżowa organizacja mieszanych sztuk walki (MMA) na świecie. Założona w 1993 roku przez Art'a Davie, Roriona Gracie i innych, UFC początkowo miało na celu wyłonienie najlepszego stylu walki w bezpośrednich starciach zawodników z różnych dyscyplin. 
+                </p>
+
+              
+                <img src="UFC5.jpg" alt="Walka UFC" class="image-right" />
+
+                <h2>Historia UFC</h2>
+                <p>
+                    Pierwsze wydarzenia UFC miały na celu pokazanie, jak różne style walki – od brazylijskiego jiu-jitsu po boks – mogą sprawdzić się w realnej walce. Jednym z kluczowych momentów była dominacja Royce'a Gracie, który przy użyciu technik BJJ pokonywał znacznie większych przeciwników, co ostatecznie udowodniło wszechstronność tej sztuki walki.
+                </p>
+                <p>
+                    Przez lata UFC przeszło ogromną ewolucję. Z czasem wprowadzono zasady, kategorie wagowe i standardy bezpieczeństwa, co uczyniło ten sport bardziej przystępnym dla szerokiej publiczności i zawodników. W 2001 roku UFC zostało wykupione przez braci Fertitta i Dany White’a, co zapoczątkowało jego gwałtowny rozwój oraz globalną ekspansję.
+                </p>
+
+              
+                <h2>Najważniejsze trofeum - Pas mistrzowski</h2>
+                <img src="belt.jfif" alt="Pas mistrzowski UFC" class="image-center" />
+
+                <p>
+                    Pas mistrzowski UFC jest symbolem najwyższych umiejętności w MMA. Zawodnicy walczą o tytuł mistrza w różnych kategoriach wagowych, a posiadanie pasa to jedno z największych osiągnięć w świecie mieszanych sztuk walki.
+                </p>
+
+                <h2>Wzrost popularności i globalny sukces</h2>
+                <p>
+                    Przełomowym momentem dla UFC była walka Forresta Griffina z Stephanem Bonnarem w finale pierwszego sezonu reality show <em>The Ultimate Fighter</em> w 2005 roku. Walka ta przyciągnęła miliony widzów i ugruntowała pozycję UFC na arenie międzynarodowej. Od tego czasu UFC zorganizowało setki gal na całym świecie, przyciągając najlepszych zawodników oraz miliony fanów.
+                </p>
+                <p>
+                    Dzięki agresywnej promocji, doskonałym walkom i znakomitym zawodnikom, UFC stało się najbardziej rozpoznawalną marką w MMA, a walki transmitowane są na całym świecie.
+                </p>
+            </article>
+        </section>
+        <div id="zegarek"></div>
+        <div id="data"></div>
+        <footer>
+            <p>&copy; 2024 Damian Todorowski</p>
+        </footer>
+    </div>
+    <script>
+        //animacja najechania na menu
+        $(document).ready(function() {
+            
+            $("a.menu").on({
+                mouseover: function() {
+                    $(this).animate({
+                        width: 300
+                    }, 800);
+                },
+                mouseout: function() {
+                    $(this).animate({
+                        width: 200
+                    }, 800);
+                }
+            });
+        });
+        </script>
+
+
+</body>
+</html>

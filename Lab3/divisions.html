@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="pl" />
+    <meta name="Author" content="Damian Todorowski" />
+    <title>Moje Hobby: MMA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image">
+    <link rel="stylesheet" href="style.css"> 
+    <script src="script.js" type="text/javascript"></script> 
+    <script src="timedate.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body onload="startClock()">
+    <div id="wrapper">
+        <header>
+            <img src="Octagon.jpg" alt="octagon header"/>
+        </header>
+        <nav>
+            <a class="menu" href="index.html" id="animacjaTestowa1Menu">O MMA</a>
+            <a class="menu" href="UFC.html" id="animacjaTestowa2Menu">Ulubiona federacja</a>
+            <a class="menu active" href="divisions.html" id="animacjaTestowa3Menu">Dywizje</a>
+            <a class="menu" href="pereira.html" id="animacjaTestowa4Menu">Ulubiony zawodnik</a>
+            <a class="menu" href="poland.html" id="animacjaTestowa5Menu">Polacy w UFC</a>
+        </nav>
+        <section>
+            <article>
+                <h1>Dywizje UFC</h1>
+                
+                <p>UFC posiada kilka kategorii wagowych, aby zapewnić równowagę między zawodnikami. Każda z dywizji ma swoje limity wagowe i własnych mistrzów. Oto kilka z najpopularniejszych kategorii:</p>
+                <ul>
+                    <img src="weights.jpg" alt="Limity wagowe" class="image-right" />
+                    <li><strong>Piórkowa</strong> (do 66 kg): To dywizja, w której zawodnicy są znani z szybkości i techniki. Mistrzostwo tej kategorii jest często uznawane za jedno z najbardziej prestiżowych.</li>
+                    <li><strong>Lekka</strong> (do 70 kg): Ta kategoria jest znana z intensywnych walk i wszechstronnych zawodników, którzy potrafią zarówno walczyć w stójce, jak i w parterze.</li>
+                    <li><strong>Średnia</strong> (do 84 kg): Zawodnicy w tej dywizji są zazwyczaj dobrze zbalansowani między siłą a techniką, co prowadzi do emocjonujących pojedynków.</li>
+                    <li><strong>Półciężka</strong> (do 93 kg): Ta kategoria łączy zawodników o różnych stylach walki, co czyni walki w niej bardzo interesującymi.</li>
+                    <li><strong>Ciężka</strong> (powyżej 93 kg): Zawodnicy w tej dywizji są często najsilniejsi, a ich walki przyciągają największą uwagę ze względu na ich potężne uderzenia i dramatyczne zakończenia.</li>
+                </ul>
+                
+                <h2>Struktura dywizji</h2>
+                <p>W każdej dywizji UFC zawodnicy rywalizują o tytuł mistrza, a także o rankingi, które określają ich pozycję w lidze. Wprowadzenie kategorii wagowych było kluczowe dla rozwoju MMA, ponieważ pozwoliło na stworzenie bardziej zrównoważonych pojedynków, w których zawodnicy mają podobne warunki fizyczne.</p>
+                <img src="athletes.jfif" alt="Zawodnicy MMA" class="image-left" />
+                <h2>Walka o tytuł mistrza</h2>
+                <p>Mistrzowie każdej dywizji są uznawani za najlepszych zawodników w swoim ciężarze, a walki o tytuł mistrza UFC są jednymi z najbardziej wyczekiwanych wydarzeń w kalendarzu MMA. Zawodnicy muszą przejść przez system rankingowy, aby zdobyć szansę na walkę o pas, a rywalizacje często są nazywane "walką o tytuł" w związku z ich dużą wagą w świecie sportu.</p>
+                
+                <h2>Przykłady znanych mistrzów</h2>
+                <p>Choć nie będziemy wymieniać konkretnych zawodników, warto wspomnieć, że w każdej z dywizji UFC pojawiło się wielu znakomitych mistrzów, którzy na zawsze zapisali się w historii sportu dzięki swoim osiągnięciom i niesamowitym występom w oktagonie.</p>
+                
+ 
+                
+     
+                
+                <img src="halloffame.jpg" alt="Hall of Fame UFC" class="image-center" />
+                
+
+
+
+                <h2>Konwersja kategorii wagowych</h2>
+                <form name="unitForm">
+                    <input type="text" name="input" value="0">
+                    <select name="measure1">
+                        <option value="1">Kilogram</option>
+                        <option value="2.20462">Funt</option>
+                    </select>
+                    na
+                    <select name="measure2">
+                        <option value="1">Kilogram</option>
+                        <option value="2.20462">Funt</option>
+                    </select>
+                    <br><br>
+                    Wynik: <input type="text" name="display" value="0">
+                    <button type="button" onclick="convert(document.unitForm, document.unitForm.measure1, document.unitForm.measure2)">Przelicz</button>
+                    <button type="button" onclick="clear(document.unitForm)">Wyczyść</button>
+                </form>
+
+              
+
+                <h2>Zmiana koloru tła</h2>
+                <button onclick="changeBackground('#FF5733')">Zmień tło na pomarańczowe</button>
+                <button onclick="changeBackground('#28B463')">Zmień tło na zielone</button>
+            </article>
+
+        
+        </section>
+        <div id="zegarek"></div>
+        <div id="data"></div>
+        <footer>
+            <p>&copy; 2024 Damian Todorowski</p>
+        </footer>
+    </div>
+    <script>
+        //animacja najechania na menu
+        $(document).ready(function() {
+            
+            $("a.menu").on({
+                mouseover: function() {
+                    $(this).animate({
+                        width: 300
+                    }, 800);
+                },
+                mouseout: function() {
+                    $(this).animate({
+                        width: 200
+                    }, 800);
+                }
+            });
+        });
+        </script>
+
+
+    
+</body>
+</html>
