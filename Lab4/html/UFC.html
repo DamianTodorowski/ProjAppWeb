@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="pl" />
+    <meta name="author" content="Damian Todorowski" />
+    <title>Moje Hobby: MMA - Ulubiona Federacja</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css"> 
+    <script src="./js/timedate.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body onload="startClock()">
+    <div id="wrapper">
+        <header>
+            <img src="../jpg/Octagon.jpg" alt="Nagłówek w kształcie oktagonu MMA" />
+        </header>
+        <nav>
+            <a class="menu" href="index.html" id="animacjaTestowa1Menu">O MMA</a>
+            <a class="menu active" href="UFC.html" id="animacjaTestowa2Menu">Ulubiona Federacja</a>
+            <a class="menu" href="divisions.html" id="animacjaTestowa3Menu">Dywizje</a>
+            <a class="menu" href="pereira.html" id="animacjaTestowa4Menu">Ulubiony Zawodnik</a>
+            <a class="menu" href="poland.html" id="animacjaTestowa5Menu">Polacy w UFC</a>
+        </nav>
+        <section>
+            <article>
+                <h1>Ulubiona Federacja: UFC</h1>
+                <img src="../jpg/LOGO.jpg" alt="Logo UFC" class="logo-image" />
+
+                <p><strong>Ultimate Fighting Championship (UFC)</strong> to największa i najbardziej prestiżowa organizacja mieszanych sztuk walki (MMA) na świecie. Założona w 1993 roku przez Arta Davie, Roriona Gracie i innych, UFC miało na celu wyłonienie najlepszego stylu walki w bezpośrednich starciach zawodników z różnych dyscyplin.</p>
+
+                <img src="../jpg/UFC5.jpg" alt="Walka UFC" class="image-right" />
+
+                <h2>Historia UFC</h2>
+                <p>Początkowo UFC organizowało starcia mające pokazać, jak różne style walki – od brazylijskiego jiu-jitsu po boks – radzą sobie w prawdziwej walce. Royce Gracie, dominując w pierwszych edycjach, udowodnił skuteczność BJJ, pokonując znacznie większych przeciwników.</p>
+                <p>Wraz z rozwojem organizacji wprowadzono kategorie wagowe, zasady oraz standardy bezpieczeństwa, dzięki czemu sport stał się bardziej przystępny. Kluczowy moment nadszedł w 2001 roku, gdy UFC zostało wykupione przez braci Fertitta i Dany White’a, co przyczyniło się do jego globalnego sukcesu.</p>
+
+                <h2>Najważniejsze Trofeum - Pas Mistrzowski</h2>
+                <img src="../jpg/belt.jfif" alt="Pas Mistrzowski UFC" class="image-center" />
+
+                <p>Pas mistrzowski UFC to symbol najwyższych umiejętności w MMA. Zdobycie tego trofeum to jedno z największych osiągnięć w świecie mieszanych sztuk walki.</p>
+
+                <h2>Wzrost Popularności i Globalny Sukces</h2>
+                <p>Przełomowym momentem dla UFC była walka Forresta Griffina z Stephanem Bonnarem w finale <em>The Ultimate Fighter</em> w 2005 roku, która przyciągnęła miliony widzów. Od tego czasu UFC zorganizowało setki wydarzeń na całym świecie, promując najlepszych zawodników oraz zdobywając serca milionów fanów.</p>
+                <p>UFC stało się najbardziej rozpoznawalną marką w MMA, a transmisje gal przyciągają fanów z całego globu.</p>
+            </article>
+        </section>
+        <div id="zegarek"></div>
+        <div id="data"></div>
+        <footer>
+            <p>&copy; 2024 Damian Todorowski</p>
+        </footer>
+    </div>
+
+    <script>
+        // Animacja najechania na elementy menu
+        $(document).ready(function() {
+            $("a.menu").on({
+                mouseover: function() {
+                    $(this).animate({ width: 300 }, 800);
+                },
+                mouseout: function() {
+                    $(this).animate({ width: 200 }, 800);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="pl" />
+    <meta name="Author" content="Damian Todorowski" />
+    <title>Moje Hobby: MMA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/timedate.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body onload="startClock()">
+    <div id="wrapper">
+        <header>
+            <img src="../jpg/Octagon.jpg" alt="octagon header"/>
+        </header>
+        <nav>
+            <a class="menu" href="index.html" id="animacjaTestowa1Menu">O MMA</a>
+            <a class="menu" href="UFC.html" id="animacjaTestowa2Menu">Ulubiona federacja</a>
+            <a class="menu" href="divisions.html" id="animacjaTestowa3Menu">Dywizje</a>
+            <a class="menu active" href="pereira.html" id="animacjaTestowa4Menu">Ulubiony zawodnik</a>
+            <a class="menu" href="poland.html" id="animacjaTestowa5Menu">Polacy w UFC</a>
+        </nav>
+        <section>
+            <article>
+                <h1>Ulubiony zawodnik: Alex Pereira</h1>
+                <p>Alex Pereira to mistrz UFC w kategorii średniej, który zdobył uznanie dzięki swoim wyjątkowym umiejętnościom w kickboxingu oraz MMA. 
+                   <img src="../jpg/alex.jfif" alt="Alex Pereira" class="image-left">
+                   Urodził się w Brazylii, gdzie od młodych lat trenował sztuki walki, zdobywając doświadczenie, które później wykorzystał w zawodowym ringu. 
+                   Jego techniki walki są osadzone w kickboxingu, co sprawia, że jest nie tylko silnym uderzającym, ale także niezwykle zręcznym i technicznym zawodnikiem. 
+                   Pereira ma na koncie wiele spektakularnych nokautów, które świadczą o jego potężnej sile ciosu i precyzji.
+                </p>
+                <p>
+                   W UFC szybko zdobył popularność, wygrywając z czołowymi zawodnikami, co przyniosło mu nie tylko tytuł mistrza, ale także miejsce w historii tego sportu. 
+                   <img src="../jpg/poatan.jfif" alt="Pereira 'Poatan'" class="image-right">
+                 
+                   Jego styl walki charakteryzuje się agresywnym podejściem i umiejętnością dostosowywania się do przeciwnika, co czyni go trudnym rywalem.
+                </p>
+                <p>
+                   Poza osiągnięciami w ringu, Pereira jest również inspiracją dla wielu młodych sportowców, którzy marzą o karierze w MMA. 
+                   Jego determinacja, ciężka praca oraz chęć do ciągłego doskonalenia swoich umiejętności pokazują, że sukces w tym sporcie wymaga nie tylko talentu, ale także niezłomnej woli i poświęcenia.
+              
+                   Alex Pereira to zawodnik, którego nie można zignorować w kontekście rozwoju MMA, a jego osiągnięcia będą na pewno na długo zapamiętane przez fanów tego ekscytującego sportu.
+                    <br> #CHAMA🗿 
+                </p>
+            </article>
+        </section>
+        <div id="zegarek"></div>
+        <div id="data"></div>
+        <footer>
+            <p>&copy; 2024 Damian Todorowski</p>
+        </footer>
+    </div>
+    <script>
+        $(document).ready(function() {
+            // Animacja najechania na menu
+            $("a.menu").on({
+                mouseover: function() {
+                    $(this).animate({
+                        width: 300
+                    }, 800);
+                },
+                mouseout: function() {
+                    $(this).animate({
+                        width: 200
+                    }, 800);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
