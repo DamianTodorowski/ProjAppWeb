@@ -1,0 +1,71 @@
+/* Stylizacja ogólna */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Jasne tło */
+}
+
+/* Wrapper - centralna struktura */
+#wrapper {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff; /* Białe tło */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Cień dla estetyki */
+}
+
+/* Nagłówek */
+header {
+    background-color: #333; /* Ciemne tło */
+    padding: 20px 0;
+    text-align: center;
+}
+
+header img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover; /* Dostosowanie obrazka */
+}
+
+/* Nawigacja */
+nav {
+    background-color: #222; /* Ciemne tło */
+    overflow: hidden;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    color: #fff; /* Biały tekst */
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease; /* Płynna zmiana koloru */
+}
+
+/* Sekcja treści */
+section {
+    padding: 20px;
+}
+
+section h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+section p, section ul {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Stopka */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
