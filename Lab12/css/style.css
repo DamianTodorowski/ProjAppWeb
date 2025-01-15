@@ -1,0 +1,170 @@
+/* Stylizacja ogólna */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Jasne tło */
+}
+
+/* Wrapper - centralna struktura */
+#wrapper {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff; /* Białe tło */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Cień dla estetyki */
+}
+
+/* Nagłówek */
+header {
+    background-color: #333; /* Ciemne tło */
+    padding: 20px 0;
+    text-align: center;
+}
+
+header img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover; /* Dostosowanie obrazka */
+}
+
+nav {
+    display: flex;
+    justify-content: space-around; /* Rozmieszczenie kafelków */
+    background-color: #222; /* Ciemne tło */
+    padding: 20px 0;
+    width: 100%; /* Nawigacja zajmuje całą szerokość */
+}
+
+nav a {
+    display: inline-block;
+    color: #fff;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #222; /* Tło kafelków */
+    border: 2px solid transparent;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #444;
+    border-color: #444;
+}
+
+/* Sekcja treści */
+section {
+    padding: 20px;
+}
+
+section h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+section p, section ul {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Stopka */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+
+
+.image-left {
+    float: left;
+    margin: 10px 15px 10px 0;
+    max-width: 300px; /* Dopasuj maksymalną szerokość zdjęcia */
+    height: auto;
+    border-radius: 8px;
+}
+
+.image-right {
+    float: right;
+    margin: 10px 0 10px 15px;
+    max-width: 300px; /* Dopasuj maksymalną szerokość zdjęcia */
+    height: auto;
+    border-radius: 8px;
+}
+
+article {
+    overflow: hidden; /* Zapobiega wypływaniu elementów po float */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article p {
+    margin-bottom: 15px;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/* Kontener produktów */
+div[style*="display: flex;"] {
+    justify-content: center;
+    margin: 20px auto;
+}
+
+
+
+button {
+    background: #b30000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #d10a0a;
+}
+
+form input[type="number"] {
+    width: 60px;
+    padding: 5px;
+}
+
+/* Koszyk */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background-color: #f4f4f4;
+    color: #444;
+}
